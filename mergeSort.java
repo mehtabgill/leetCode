@@ -7,6 +7,7 @@ public class MergeSort {
                 int temp = arr[i];
                 arr[i] = arr[rhsCounter];
                 arr[rhsCounter]=temp;
+                
             }
             if(rhsCounter == e){
                 break;
