@@ -11,10 +11,10 @@ public class InsertionSort {
             }
             // move up elements
             int temp=arr[i];
-            for(int j=index; j<=i; j++){
-                int innerTemp = temp;
-                temp=arr[j];
-                arr[j]=innerTemp;
+            for(int j=i; j >index; j--){
+                int innerTemp = arr[j];
+                arr[j] = arr[j-1];
+                arr[j-1]=innerTemp;
 
             }
         }
@@ -33,8 +33,8 @@ public class InsertionSort {
     // Driver method 
     public static void main(String args[]) 
     { 
-        int arr[] = { 12}; 
-        // int arr[] = { 3, 2, 1 }; 
+        // int arr[] = { 12}; 
+        int arr[] = { 3, 2, 1, -1, 0, 1234, -9999 }; 
   
         InsertionSort ob = new InsertionSort(); 
         ob.insertionSort(arr); 
